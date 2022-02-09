@@ -1,5 +1,5 @@
 
-const easyQuestions= [
+const questions= [
     {
         Question: "What immense structure is referred to in Norse mythology as the Yggdrasil?",
         Options:['Upper Sacred Tree', 'Lower Sacred Tree','Central Sacred Tree' ],    
@@ -379,27 +379,30 @@ let availableQuestions=[];
 let availableAnswers=[];
 let score=0;
 
-function setAvailableQuestions () {
+
+
+const hardqs=questions.filter(function(question){
+    return question.difficulty == '2'
+}) //2
+
+const medqs=questions.filter(function(question){
+    return question.difficulty == '1'
+}) //1
+
+
+const easyqs=questions.filter(function(question){
+    return question.difficulty == '0'
+}) //0
+
+console.log(hardqs)
+console.log(medqs)
+console.log(easyqs)
+
+/*function setAvailableQuestions () {
 
    
-    const easyQ=easyQuestions.length;
-    const mediumQ=mediumQuestions.length;
-    const hardQ=hardQuestions.length;
+    
 
-    if (easy) {
-        for (let i=0; i<easyQ; i++){
-        availableQuestions.push(easyQuestions[i]);
-        } 
-    }
-    if (medium) {
-        for (let i=0; i<mediumQ; i++){
-        availableQuestions.push(mediumQuestions[i]);
-        } 
-    } if (hard) {
-        for (let i=0; i<hardQ; i++){
-            availableQuestions.push(hardQuestions[i]);
-    }
-    newQuestion()
 }
 }
 function newQuestion () {
@@ -455,4 +458,4 @@ function checkResult (element){
         newQuestion()
     }, 900)
 }
-setAvailableQuestions()
+*/
