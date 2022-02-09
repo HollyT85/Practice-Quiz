@@ -361,10 +361,6 @@ const questions= [
     }
     ]
 
-
-
-
-
 const updateQuestionNumber = document.getElementById('questionNumber');
 const question=document.getElementById('question');
 const answers=document.getElementById('answer-container');
@@ -383,41 +379,37 @@ let score=0;
 
 
 const hardqs=questions.filter(function(question){
-    return question.difficulty == '2'
-}) //2
+    return question.difficulty == 'hard'
+}) //hard
+
 
 const medqs=questions.filter(function(question){
-    return question.difficulty == '1'
-}) //1
+    return question.difficulty == 'medium'
+}) //medum
 
 
 const easyqs=questions.filter(function(question){
-    return question.difficulty == '0'
-}) //0
+    return question.difficulty == 'easy'
+}) //easy
 
-function easyclick() {
-    if (easy.clicked) {
-    setEasyQuestions()
-}
+
+
+easy.addEventListener('click', ()=> {
+    console.log(easyqs)
+})
 
 medium.addEventListener('click', ()=> {
-    console.log('hello')
+    console.log(medqs)
 })
 
 hard.addEventListener('click', ()=> {
-    console.log('working')
+    console.log(hardqs)
 })
 
-const easyqs=questions.filter(function(question){
-    return question.difficulty == 0
-}) //0
 
 
-function setEasyQuestions () {
-    const easyQuestions=easyqs.length
 
-    console.log(easyQuestions)
-}
+
 
 
 function newQuestion () {
@@ -472,5 +464,4 @@ function checkResult (element){
     setTimeout(function() {
         newQuestion()
     }, 900)
-}
 }
