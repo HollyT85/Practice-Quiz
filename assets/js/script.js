@@ -394,9 +394,14 @@ const easyqs=questions.filter(function(question){
     return question.difficulty == '0'
 }) //0
 
-console.log(hardqs)
-console.log(medqs)
-console.log(easyqs)
+easy.addEventListener("click", ()=> {
+    console.log(easyqs)
+})
+
+
+
+
+
 
 /*function setAvailableQuestions () {
 
