@@ -394,22 +394,31 @@ const easyqs=questions.filter(function(question){
     return question.difficulty == '0'
 }) //0
 
-easy.addEventListener("click", ()=> {
-    console.log(easyqs)
+function easyclick() {
+    if (easy.clicked) {
+    setEasyQuestions()
+}
+
+medium.addEventListener('click', ()=> {
+    console.log('hello')
 })
 
+hard.addEventListener('click', ()=> {
+    console.log('working')
+})
+
+const easyqs=questions.filter(function(question){
+    return question.difficulty == '0'
+}) //0
 
 
+function setEasyQuestions () {
+    const easyQuestions=easyqs.length
 
-
-
-/*function setAvailableQuestions () {
-
-   
-    
-
+    console.log(easyQuestions)
 }
-}
+
+
 function newQuestion () {
 
     if (questionCounter == numberOfQuestions){
@@ -463,4 +472,4 @@ function checkResult (element){
         newQuestion()
     }, 900)
 }
-*/
+}
