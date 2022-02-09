@@ -1,0 +1,132 @@
+/*Whole page styling*/
+body {
+    margin: 0;
+    padding:0;
+    background-color: #2e145d;
+}
+
+.img-holder {
+    padding: 0;
+    margin: 0;
+}
+
+.background-image {
+    width:100vw;
+    position: absolute;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container-container {
+    position: relative;
+    padding: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size:62.5%;
+    font-family: 'Caesar Dressing', cursive;
+}
+
+.holder {
+    display:flex;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: auto;
+    padding:2rem;
+    background-color: rgba(188, 123, 59, 0.7);
+    border-radius: 20px;
+    border: #18191a 20px double;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/*Styling features */
+
+.hide {
+    display:none;
+}
+
+.title {
+    font-size: 5.4rem;
+    color: #18191a;
+    margin-bottom: 2rem;
+    font-family: 'Caesar Dressing', cursive;
+
+}
+
+.tag-line {
+    font-family: 'Caesar Dressing', cursive;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+.btn, .btn-hover {
+    font-size: 2.4rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #c0c0c0;
+    background-color: #18191a;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Caesar Dressing', cursive;
+}
+
+.question-number, .question, .score, .sub-title, .score, .correct-answers {
+    font-size: 3rem;
+    color: black;
+    margin-bottom: 5rem;
+    font-family: 'Caesar Dressing', cursive;
+}
+
+/*responsiveness for users based on their actions*/
+
+.correct {
+    background-color: #2e145d;
+}
+
+.incorrect {
+    background-color: #2e145d;
+}
+
+.btn-hover:hover {
+    background-color: #261342;
+}
+
+.btn:hover{
+    box-shadow: 2px 2px 2px 2px #c0c0c0 inset;
+}
+
+/*mobile background*/
+
+@media(max-width: 800px) {
+    .background-image {
+        display: none;
+    }
+}
+
+
+
+
