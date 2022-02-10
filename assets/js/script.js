@@ -394,22 +394,65 @@ const easyqs=questions.filter(function(question){
 
 
 
-easy.addEventListener('click', ()=> {
-    console.log(easyqs)
-})
-
-medium.addEventListener('click', ()=> {
-    console.log(medqs)
-})
-
-hard.addEventListener('click', ()=> {
-    console.log(hardqs)
-})
 
 
 
 
 
+
+
+function checkStatus() {
+    if (easy!==null) {
+        easy.addEventListener('click', ()=> {
+            setEasyQuestion()
+        })
+    }
+     if (medium!==null) {
+        medium.addEventListener('click', ()=> {
+            setMedQuestion()
+    })
+    if (hard!==null) {
+        hard.addEventListener('click', ()=> {
+            setHardQuestion()
+        })
+    }
+}
+
+}
+checkStatus()
+
+function setEasyQuestion () {
+
+   
+    const allQuestions=easyqs.length;
+    for (let i=0; i<allQuestions; i++){
+        availableQuestions.push(easyqs[i]);
+        } 
+
+        newQuestion()
+}
+
+function setMedQuestion () {
+
+   
+    const allQuestions=medqs.length;
+    for (let i=0; i<allQuestions; i++){
+        availableQuestions.push(medqs[i]);
+        } 
+
+        newQuestion()
+}
+
+function setHardQuestion () {
+
+   
+    const allQuestions=hardqs.length;
+    for (let i=0; i<allQuestions; i++){
+        availableQuestions.push(hardqs[i]);
+        } 
+
+        newQuestion()
+}
 
 
 function newQuestion () {
